@@ -74,10 +74,6 @@ func (s *ArchiverSuite) TestFixtures() {
 		}
 
 		s.T().Run(ct.TestName, func(t *testing.T) {
-			if ct.TestName ==  "one existing reference is removed (output with references)" {
-				t.Skip("go-git bug: https://github.com/src-d/go-git/issues/466")
-			}
-
 			require := require.New(t)
 			assert := assert.New(t)
 
@@ -103,10 +99,10 @@ func (s *ArchiverSuite) TestFixtures() {
 				assert.NoError(err, "job: %v", j)
 			}
 
-			nr, err := ct.NewRepository()
+			or, err := ct.OldRepository()
 			require.NoError(err)
 
-			err = withInProcRepository(nr, func(url string) error {
+			err = withInProcRepository(or, func(url string) error {
 				mr := model.NewRepository()
 				mr.Endpoints = append(mr.Endpoints, url)
 				mr.References = ct.OldReferences
@@ -120,6 +116,9 @@ func (s *ArchiverSuite) TestFixtures() {
 
 			checkNoFiles(t, txFs)
 			checkNoFiles(t, tmpFs)
+
+			nr, err := ct.NewRepository()
+			require.NoError(err)
 
 			checkReferences(t, nr, ct.NewReferences)
 		})

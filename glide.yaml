@@ -10,7 +10,7 @@ import:
   version: ^3.0.1
 - package: gopkg.in/src-d/go-git.v4
   repo: https://github.com/src-d/go-git.git
-  version: ce6f5b7c82fc6c2c4d41880ed6b26f921dd9c1c3
+  version: 6b69a1630b30c41f4563fd95aca1d647ba611adf
   subpackages:
   - config
   - plumbing

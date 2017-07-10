@@ -1,5 +1,5 @@
-hash: 0f9c5db00b423aba66d034e150c6f6bcdcb780829943d6be3842feb45f2ca955
-updated: 2017-07-06T17:40:29.174263408+02:00
+hash: 47838725d051a91f75e57ee3f14064477f4b42c78fc322a9a68a9c1c7cc0c92c
+updated: 2017-07-10T12:11:25.210364823+02:00
 imports:
 - name: github.com/davecgh/go-spew
   version: 6d212800a42e8ab5c146b8ace3490ee17e5225f9
@@ -127,7 +127,7 @@ imports:
 - name: gopkg.in/src-d/go-errors.v0
   version: 0c303ec4c027302259ec1738f19f515aad25f13f
 - name: gopkg.in/src-d/go-git.v4
-  version: ce6f5b7c82fc6c2c4d41880ed6b26f921dd9c1c3
+  version: 6b69a1630b30c41f4563fd95aca1d647ba611adf
   repo: https://github.com/src-d/go-git.git
   subpackages:
   - config
